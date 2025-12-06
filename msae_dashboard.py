@@ -789,8 +789,7 @@ def create_weekly_heatmap(df):
         hovertemplate='<b>%{y}</b> - %{x}<br>Réclamations: %{z}<extra></extra>',
         showscale=True,
         colorbar=dict(
-            title='Dossiers',
-            titleside='right',
+            title=dict(text='Dossiers', side='right'),
             tickmode='linear',
             tick0=0,
             dtick=5
