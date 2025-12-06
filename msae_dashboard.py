@@ -1273,9 +1273,10 @@ app.layout = html.Div([
                         }
                     ),
                     dcc.Graph(
-                                        id='graph-ratio',
-                                        figure=create_ratio_chart(ratio_data),
-                        config={'displayModeBar': False}
+                        id='graph-ratio',
+                        figure=create_ratio_chart(ratio_data),
+                        config={'displayModeBar': False, 'responsive': True},
+                        style={'height': '400px'}
                     )
                 ], style=CARD_STYLE)
             ], md=6, className='mb-4'),
@@ -1302,7 +1303,8 @@ app.layout = html.Div([
                     dcc.Graph(
                         id='graph-finances',
                         figure=create_finances_chart(finances_data),
-                        config={'displayModeBar': False}
+                        config={'displayModeBar': False, 'responsive': True},
+                        style={'height': '400px'}
                     )
                 ], style=CARD_STYLE)
             ], md=6, className='mb-4'),
@@ -1332,7 +1334,8 @@ app.layout = html.Div([
                     dcc.Graph(
                         id='graph-service-donut',
                         figure=create_service_distribution_donut(claims_df),
-                        config={'displayModeBar': False}
+                        config={'displayModeBar': False, 'responsive': True},
+                        style={'height': '350px'}
                     )
                 ], style=CARD_STYLE)
             ], md=4, className='mb-4'),
@@ -1359,7 +1362,8 @@ app.layout = html.Div([
                     dcc.Graph(
                         id='graph-claims-funnel',
                         figure=create_claims_funnel(claims_df),
-                        config={'displayModeBar': False}
+                        config={'displayModeBar': False, 'responsive': True},
+                        style={'height': '350px'}
                     )
                 ], style=CARD_STYLE)
             ], md=4, className='mb-4'),
@@ -1386,7 +1390,8 @@ app.layout = html.Div([
                     dcc.Graph(
                         id='graph-weekly-heatmap',
                         figure=create_weekly_heatmap(claims_df),
-                        config={'displayModeBar': False}
+                        config={'displayModeBar': False, 'responsive': True},
+                        style={'height': '350px'}
                     )
                 ], style=CARD_STYLE)
             ], md=4, className='mb-4'),
@@ -1458,7 +1463,8 @@ app.layout = html.Div([
                     dcc.Graph(
                         id='fraud-gauge',
                         figure=create_fraud_gauge(87),
-                        config={'displayModeBar': False}
+                        config={'displayModeBar': False, 'responsive': True},
+                        style={'height': '250px'}
                     ),
                     html.Div([
                         html.Div([
